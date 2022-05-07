@@ -1,0 +1,130 @@
+@import "variables";
+@import "fonts";
+@import "mixin";
+
+/*=====================================================================
+==========================   main-css-all-pages  =========================
+========================================================================*/
+
+body {
+  @include full-width;
+  margin: 0;
+  padding: 0;
+  @include poppin(regular400);
+}
+
+
+/*=====================================================================
+==========================   font-face  =========================
+========================================================================*/
+
+
+a, a:hover, a:active, a:focus, a:link, a:visited {
+  text-decoration: none;
+  @include transition(.5s);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a, p, h1, h2, h3, h4, h5, h6, li, ul {
+  margin: 0;
+  padding: 0;
+  transition: .5s;
+}
+
+.vertical-block {
+  @include full-width;
+  display: table;
+  height: 100%;
+
+  .cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.opacity0 {
+  opacity: 0!important;
+}
+
+.text-blue {
+  color: $blue!important;
+}
+
+
+//btn
+button, .btn, .form-control, input {
+  @include border-radius(0);
+  @include box-shadow(none);
+
+
+  &:focus, &:active, &:visited {
+    outline: none;
+    @include box-shadow(none);
+    @include border-radius(0);
+  }
+}
+
+//mb500
+.mb500{
+  @include full-width;
+  margin-bottom: 500px;
+}
+
+//scroll
+
+#scroll {
+  position: fixed;
+  right: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: $red;
+  text-indent: -9999px;
+  display: none;
+  @include border-radius(60);
+  bottom: 60px;
+  z-index: 9999;
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -12px;
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-bottom-color: $white;
+  }
+
+  &:hover {
+    background-color: $blue;
+    opacity: 1;
+    filter: "alpha(opacity=100)";
+    -ms-filter: "alpha(opacity=100)";
+  }
+}
+
+//main-scss
+@import "header-footer";
+@import "mega-menu";
+@import "custom-modal";
+@import "home";
+@import "main-slider";
+@import "accueil";
+@import "connexion";
+@import "inscription-particulier";
+@import "pensions";
+@import "nouveautes";
+@import "reservationd-pension";
+@import "transver-sales";
+@import "nourriture";
+@import "mes-produits";
+@import "panier";
+@import "nom-produit";
+

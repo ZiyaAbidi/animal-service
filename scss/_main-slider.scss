@@ -1,0 +1,266 @@
+/*========================================================================================================
+================================ Main-Slider ===================================================================
+===========================================================================================================*/
+
+.main-slider {
+  @include full-width;
+  background-color: $gray;
+
+  //bg-yellow
+  &.bg-yellow {
+    background-color: $yellow;
+
+
+    //breadcrumb-sec
+    .breadcrumb-sec {
+      position: relative;
+    }
+  }
+
+  @include mq(max, 767) {
+    margin-bottom: 15px;
+  }
+
+  //item
+  .item {
+    padding: 180px 0 110px;
+
+    @include mq(max, 767) {
+      margin-bottom: 15px;
+      padding-bottom: 0;
+      padding-top: 350px;
+    }
+  }
+
+  .item-bg {
+    background-size: cover;
+    @include overlay;
+    background-position: center;
+
+    @include mq(max, 767) {
+      -webkit-background-size: contain;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+
+  //breadcrumb-sec
+  .breadcrumb-sec {
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+.search-adv {
+  position: absolute;
+  z-index: 9;
+  width: 928px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40px;
+
+  @include mq(max, 767) {
+    width: 100%;
+    position: static;
+    transform: none;
+    margin: 0 auto;
+    background: $yellow;
+    padding: 10px 15px 10px;
+  }
+
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $white;
+    @include border-radius(50);
+
+
+    li {
+      padding: 12px 15px;
+      width: 100%;
+
+      @include mq(max, 767) {
+        padding: 4px 8px;
+      }
+
+      &:first-child {
+        padding-left: 48px;
+
+        @include mq(max, 767) {
+          padding-left: 25px;
+        }
+      }
+
+      &:last-child {
+        width: 221px;
+
+        @include mq(max, 767) {
+          width: 93px;
+        }
+      }
+
+      .form-group {
+        margin-bottom: 0;
+
+        label {
+          display: block;
+          @include poppin(sembold600);
+          font-size: 13px;
+          margin-bottom: 0;
+        }
+
+        input {
+          border: none;
+          border-bottom: 2px solid #777777;
+          @include border-radius(0);
+          font-size: 14.93px;
+          padding: 0;
+          letter-spacing: 0.2px;
+          color: $lgtblack;
+
+          &::placeholder {
+            color: $lgtblack;
+          }
+
+          &[type="date"] {
+            cursor: pointer;
+
+            &::-webkit-calendar-picker-indicator {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      img {
+        @include mq(max, 767) {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+
+//slide-caption
+.slide-caption {
+
+  @include mq(max, 767) {
+    padding-left: 25px;
+    padding-bottom: 45px;
+  }
+
+  h4 {
+    @include poppin(sembold600);
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $dgray;
+    margin-bottom: 18px;
+    letter-spacing: -0.6px;
+  }
+
+  h3 {
+    @include poppin(bold700);
+    font-size: 37.34px;
+    color: $dgray;
+    margin-bottom: 19px;
+    letter-spacing: 1px;
+
+    @include mq(max, 767) {
+      font-size: 26px;
+    }
+  }
+
+  h5 {
+    @include poppin(regular400);
+    font-size: 15.15px;
+    color: $black;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+    line-height: 1.4;
+
+    span {
+      font-weight: 500;
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    i.fa {
+      font-size: 21px;
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  p {
+    @include poppin(regular400);
+    font-size: 18.68px;
+    color: $black;
+    margin-bottom: 35px;
+    padding-right: 100px;
+    letter-spacing: 0.3px;
+    line-height: 1.6;
+
+    @include mq(max, 767) {
+      display: none;
+    }
+  }
+}
+
+//btn-main
+.btn-main {
+  a {
+    font-size: 20.13px;
+    padding: 8px 40px;
+    @include border-radius(100);
+    color: $white;
+    display: inline-block;
+    @include poppin(sembold600);
+    border: 2px solid;
+
+    @include mq(max, 767) {
+      font-size: 16px;
+    }
+
+    //display-block
+    &.display-block{
+      display: block;
+    }
+  }
+
+  //red-bg
+  &.red-bg {
+    a {
+      background: $red;
+      border-color: $red;
+
+      &:hover {
+        background: transparent;
+        color: $red;
+      }
+    }
+  }
+
+  //blue-bg
+  &.blue-bg {
+    a {
+      background: $blue;
+      border-color: $blue;
+
+      &:hover {
+        background: transparent;
+        color: $blue;
+      }
+    }
+  }
+
+  //plr70px
+  &.plr70px {
+    a {
+      padding: 8px 70px;
+    }
+  }
+}

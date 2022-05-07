@@ -1,0 +1,39 @@
+//mes-produits
+.mes-produits {
+  .description-dtl {
+    margin-bottom: 60px;
+
+    @include mq(max, 768) {
+      margin-bottom: 30px;
+    }
+  }
+
+  //content-dtl
+  .content-dtl {
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+
+  //btn-custom
+  .btn-custom {
+    a {
+      padding: 3px 15px;
+    }
+  }
+
+  .pagination-div{
+    .pagination{
+      margin-bottom: 55px;
+    }
+  }
+}
+
+//mb110px
+.mb110px {
+  margin-bottom: 110px;
+
+  @include mq(max, 768) {
+    margin-bottom: 50px;
+  }
+}

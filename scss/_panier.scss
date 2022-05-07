@@ -1,0 +1,372 @@
+//mon-panier
+.mon-panier {
+  padding: 10px 0 100px;
+
+  //breadcrumb-sec
+  .breadcrumb-sec {
+    background: $lgtwhite;
+  }
+}
+
+//panier-bg
+.panier-bg {
+  background: $yellow;
+}
+
+//panier-link
+.panier-link {
+  //nav-pills
+  .nav-pills {
+    padding: 30px 0;
+    display: flex;
+
+    @include mq(max, 425) {
+      display: block;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      @include mq(min, 1365) {
+        min-width: 296px;
+      }
+
+      @include mq(max, 991) {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      @include mq(max, 425) {
+        margin-bottom: 30px;
+      }
+
+      a {
+        position: relative;
+        @include poppin(bold700);
+        font-size: 16px;
+        color: $black;
+        text-transform: uppercase;
+        @include border-radius(0);
+        padding: 0;
+
+        &:after {
+          content: '';
+          background: $blue;
+          height: 5px;
+          position: absolute;
+          bottom: -8px;
+          left: 0;
+          width: 0;
+          @include border-radius(22);
+          @include transition(.5s);
+        }
+      }
+
+      //digit-no
+      .digit-no {
+        width: 58px;
+        height: 58px;
+        @include border-radius(500);
+        background: $white;
+        @include poppin(bold700);
+        font-size: 20px;
+        color: $black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 18px;
+        cursor: pointer;
+
+        @include mq(max, 991) {
+          margin: 0 auto 15px;
+        }
+
+        .fa-check {
+          display: none;
+          font-size: 28px;
+          color: $blue;
+        }
+      }
+
+      &:hover {
+        a {
+          background: none;
+          color: $blue;
+
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+
+      &.active {
+        a {
+          background: none;
+
+          &:after {
+            content: '';
+            background: $blue;
+            height: 5px;
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            @include border-radius(22);
+          }
+        }
+
+        //digit-no
+        .digit-no {
+          .number {
+            display: none;
+          }
+
+          .fa-check {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  //tab-content
+  .tab-content {
+    .tab-pane {
+    }
+  }
+}
+
+//panier-dts
+.panier-dts {
+  @include full-width;
+  background: $lgtwhite;
+
+
+  //close-blue
+  .close-blue {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    @include mq(max, 768) {
+      top: 30px;
+      right: 30px;
+    }
+  }
+
+  h2 {
+    @include poppin(bold700);
+    font-size: 24.89px;
+    color: $lgtblack;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+
+    @include mq(max, 768) {
+      margin-bottom: 30px;
+    }
+  }
+
+  h3 {
+    @include poppin(bold700);
+    font-size: 16px;
+    color: $lgtblack;
+    margin-bottom: 23px;
+    letter-spacing: 0.35px;
+  }
+
+  p, li {
+    @include poppin(regular400);
+    font-size: 12px;
+    color: $black;
+    margin-bottom: 30px;
+
+    //red-text
+    &.red-text {
+      color: $red;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    //value
+    .value {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    //totle-price
+    &.totle-price {
+      margin-bottom: 48px;
+
+      .text-right {
+        font-size: 18px;
+        font-weight: 700;
+        float: right;
+        position: relative;
+        top: -6px;
+      }
+    }
+  }
+
+  ul {
+    margin-bottom: 33px;
+
+    li {
+      margin-bottom: 0;
+
+      //text-right
+      .text-right {
+        float: right;
+        font-weight: 700;
+      }
+
+      img {
+        display: inline-block;
+        cursor: pointer;
+      }
+    }
+  }
+
+  //media-foot
+  .media-foot {
+    text-align: left;
+    padding-left: 55%;
+
+    @include mq(max, 768) {
+      padding-left: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+      justify-content: flex-start;
+      letter-spacing: 0;
+
+      &.red-text {
+        margin-bottom: 8px;
+      }
+    }
+
+    //value
+    .value {
+      padding-left: 3px;
+    }
+
+    .line-top {
+      height: 1px;
+      width: 184px;
+      background: $line;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  }
+}
+
+//pro_dts
+.pro_dts {
+  position: relative;
+  background: $white;
+  margin-bottom: 24px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  @include border-radius(8);
+  @include box-shadow(0 1px 6px rgba(0, 0, 0, 0.2));
+
+  @include mq(max, 768) {
+    padding: 15px 15px 25px;
+  }
+
+
+  //media-left
+  .media-left {
+    padding-right: 20px;
+
+    @include mq(max, 768) {
+      padding-right: 0;
+      display: block;
+      margin-bottom: 30px;
+    }
+
+    //img-overlay
+    .img-overlay {
+      width: 283px;
+      height: 211px;
+      @include border-radius(8);
+      background: $adv;
+      overflow: hidden;
+
+      @include mq(max, 992) {
+        width: auto;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//pro_prc
+.pro_prc {
+  padding-left: 20px;
+  padding-right: 10px;
+
+  @include mq(max, 992) {
+    padding-left: 0;
+  }
+
+  ul {
+    margin-bottom: 23px;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  //btn-main
+  .btn-main {
+    width: 100%;
+    margin-bottom: 30px;
+
+    @include mq(max, 767){
+      margin-bottom: 20px;
+    }
+
+    @include mq(max, 425){
+      margin-bottom: 15px;
+    }
+
+    a {
+      padding: 9px 8px;
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      height: 48px;
+    }
+
+    .vider-panier {
+      border-color: #9f93d9;
+      color: #9f93d9;
+      background: transparent;
+      margin-bottom: 45px;
+
+      &:hover {
+        border-color: $blue;
+        color: $white;
+        background: $blue;
+      }
+    }
+
+    .valider-btn {
+    }
+
+    .continuer-btn {
+    }
+  }
+
+  //full-line
+  .full-line {
+    margin-bottom: 25px;
+  }
+}

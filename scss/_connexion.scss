@@ -1,0 +1,313 @@
+//connectez-vous
+
+.connectez-vous {
+  width: 410px;
+  background: rgba(255, 255, 255, 43%);
+  @include border-radius(12);
+  padding: 20px 33px 30px;
+
+  @include mq(max, 768) {
+    width: 100%;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 24.89px;
+    color: $lgtblack;
+    @include poppin(bold700);
+    letter-spacing: 0.6px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 14px;
+    color: $lgtblack;
+    @include poppin(regular400);
+    letter-spacing: 0.2px;
+    margin-bottom: 40px;
+  }
+
+  .form-group {
+    margin-bottom: 25px;
+  }
+
+  label {
+    font-size: 14px;
+    color: $white;
+    @include poppin(bold700);
+    margin-bottom: 8px;
+    margin-left: 22px;
+  }
+
+  input {
+    height: 48px;
+    @include border-radius(30);
+    font-size: 14px;
+    @include poppin(extlight200);
+    color: $lgtblack;
+    padding: 6px 20px;
+    letter-spacing: 0.4px;
+
+    &::placeholder {
+      color: lighten($lgtblack, 50%);
+    }
+
+    &:focus, &:active {
+      @include border-radius(30);
+      outline: none;
+      border: none;
+    }
+  }
+
+  .btn-custom {
+    display: block;
+    margin-bottom: 22px;
+  }
+
+}
+
+//mot-de-pass
+.mot-de-pass {
+  @include poppin(regular400);
+  font-size: 14px;
+  color: $white;
+  text-decoration: underline !important;
+  text-align: right;
+  display: block;
+
+  &:hover {
+    color: $yellow;
+  }
+
+  &.text-center {
+    text-align: center;
+  }
+}
+
+//cliquez-ici
+p.cliquez-ici {
+  @include poppin(regular400);
+  font-size: 14px;
+  color: $white;
+  text-align: center;
+  letter-spacing: 0;
+  margin-bottom: 0;
+
+  a {
+    color: $white;
+    text-decoration: underline !important;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+//rester-checkbox
+.rester-checkbox {
+
+  //styled-checkbox
+  .styled-checkbox {
+    &:checked + label {
+      &:after {
+        left: 5px;
+      }
+    }
+  }
+
+  label {
+    @include poppin(regular400);
+    font-size: 14px;
+    color: $white;
+  }
+}
+
+//justify-center
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+//main-slider
+.main-slider {
+  //banner-section
+  .banner-section {
+    position: relative;
+
+    .item {
+      padding: 40px 0 75px;
+      height: 700px;
+
+      @include mq(max, 767) {
+        height: auto;
+      }
+    }
+  }
+}
+
+//banner-section
+.banner-section {
+  //banner-section
+  .banner-section {
+    .item {
+      padding: 40px 0 75px;
+    }
+  }
+}
+
+//search-section
+.search-section {
+  @include img-center(vertical);
+  right: 0;
+
+  @include mq(max, 768) {
+    position: static;
+    margin-top: 30px;
+  }
+
+
+  input {
+    height: 36px;
+    width: 272px;
+    @include border-radius(100);
+    font-size: 10.72px;
+    @include poppin(regular400);
+    border: none;
+    outline: none;
+    padding: 6px 35px 6px 21px;
+    letter-spacing: 0.2px;
+    background: $input-bg;
+
+    @include mq(max, 768) {
+      width: 100%;
+    }
+  }
+
+  //btn-submit
+  .btn-submit {
+    @include img-center(vertical);
+    background: none;
+    border: none;
+    right: -6px;
+  }
+}
+
+//resultNot-found
+.resultNot-found {
+  @include full-width;
+  text-align: center;
+  padding: 100px 15px 270px;
+
+  @include mq(max, 768) {
+    padding: 50px 15px;
+  }
+
+  h3 {
+    @include poppin(sembold600);
+    font-size: 24.89px;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+  }
+
+  //search-adv
+  .search-adv {
+    width: 520px;
+    height: 81px;
+    position: relative;
+    top: 36px;
+
+    @include mq(max, 768) {
+      width: 100%;
+    }
+
+    ul {
+      li {
+        padding: 23px 0 0 0;
+        padding-left: 40px;
+
+        &:last-child {
+          width: 101px;
+          padding: 11px 15px;
+        }
+
+        .form-group {
+          input {
+            height: 29px;
+            border-bottom: 1px solid;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//404-page
+.error-page {
+  padding: 0 15px 155px;
+
+  @include mq(max, 768) {
+    padding-bottom: 50px;
+  }
+
+  h1 {
+    @include comic(regular400);
+    font-size: 150px;
+    color: $white;
+    text-align: center;
+  }
+
+  h3 {
+    @include poppin(sembold600);
+    font-size: 24.89px;
+    color: $white;
+    text-align: center;
+    margin-bottom: 37px;
+    letter-spacing: 0.7px;
+  }
+}
+
+//pension-resultats
+.pension-resultats {
+  padding: 100px 0 300px;
+
+  @include mq(max, 992) {
+    padding: 100px 0;
+  }
+
+  @include mq(max, 768) {
+    padding: 50px 0;
+  }
+
+  h3 {
+    @include poppin(sembold600);
+    font-size: 24.89px;
+    color: $white;
+    text-align: center;
+    margin-bottom: 37px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+  }
+}
+
+//ErrorPage_section
+.ErrorPage_section {
+  height: 170px;
+  position: relative;
+  z-index: 99;
+  background: $yellow;
+
+  @include mq(max, 768) {
+    height: auto;
+  }
+
+  //search-adv
+  .search-adv {
+    top: 57px;
+  }
+}
+
+

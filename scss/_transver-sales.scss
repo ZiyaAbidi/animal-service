@@ -1,0 +1,276 @@
+//bg-gray
+.bg-gray {
+  background: $lgtwhite;
+}
+
+//tranver_sales
+.tranver_sales {
+  @include full-width;
+  padding: 85px 0 100px;
+}
+
+//inline-links
+.inline-links {
+  margin-top: 95px;
+  margin-bottom: 30px;
+
+  @include mq(max, 991) {
+    margin-top: 0;
+  }
+
+  h3 {
+    @include poppin(bold700);
+    text-transform: uppercase;
+    font-size: 16px;
+    color: $lgtblack;
+    letter-spacing: 0.2px;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    margin-bottom: 30px;
+
+    li {
+      display: block;
+
+      a {
+        @include poppin(medium500);
+        font-size: 14px;
+        color: $blue;
+        text-decoration: underline;
+        padding-bottom: 10px;
+        display: block;
+
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+
+//cgu-cgv
+.cgu-cgv {
+  h2 {
+    @include poppin(bold700);
+    font-size: 24.89px;
+    color: $lgtblack;
+    margin-bottom: 10px;
+    letter-spacing: 0.8px;
+  }
+
+
+  h4 {
+    @include poppin(regular400);
+    font-size: 12px;
+    color: $black;
+    margin-bottom: 45px;
+    letter-spacing: 0.2px;
+  }
+
+  h3 {
+    @include poppin(bold700);
+    font-size: 16px;
+    color: $black;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+  }
+
+  p {
+    @include poppin(regular400);
+    font-size: 14px;
+    color: $black;
+    margin-bottom: 35px;
+    line-height: 1.35;
+  }
+
+  ul {
+    padding-left: 18px;
+    margin-bottom: 35px;
+    margin-top: -30px;
+
+    li {
+      @include poppin(regular400);
+      font-size: 14px;
+      color: $black;
+      list-style: disc;
+      letter-spacing: 0px;
+      margin-bottom: -3px;
+    }
+  }
+}
+
+//rechercher-reponse
+.rechercher-reponse {
+  h2 {
+    @include poppin(bold700);
+    font-size: 24.89px;
+    color: $black;
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
+
+    @include mq(max, 767) {
+      margin-bottom: 25px;
+    }
+  }
+
+  h3 {
+    @include poppin(bold700);
+    font-size: 24px;
+    color: $black;
+    margin-bottom: 0;
+    margin-top: 67px;
+  }
+
+  h4 {
+    @include poppin(bold700);
+    font-size: 16px;
+    color: $black;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    text-transform: uppercase;
+  }
+
+  a {
+    @include poppin(regular400);
+    font-size: 14px;
+    color: $black;
+    display: block;
+    padding-left: 5px;
+  }
+
+  .panel-heading {
+    background-color: transparent;
+    border: none;
+    @include border-radius(0);
+    position: relative;
+    padding: 0 15px;
+
+    .accordion-toggle {
+      &:after {
+        content: '';
+        left: 0;
+        @include img-center(vertical);
+        width: 10px;
+        height: 7px;
+        background-repeat: no-repeat;
+        background-image: url(../img/dropdown-open.png);
+      }
+
+      &.collapsed {
+        &:after {
+          background-image: url(../img/dropdown-close.png);
+        }
+      }
+    }
+  }
+
+  .panel.panel-default {
+    border: none;
+    border-bottom: 1px solid $black;
+    @include border-radius(0);
+    padding: 7px 0;
+    background: none;
+    @include box-shadow(none);
+  }
+
+  .panel-body {
+    border: none !important;
+    @include poppin(regular400);
+    font-size: 12px;
+    color: $black;
+    background: $yellow;
+    @include border-radius(8);
+    padding: 25px 30px;
+    margin: 10px 0;
+  }
+
+}
+
+//transversales-msg
+.transversales-msg {
+  padding: 38px 10px 110px;
+
+  @include mq(max, 768) {
+    padding: 30px 0;
+  }
+
+  @include mq(max, 425) {
+    padding: 20px 0;
+  }
+
+  img {
+    margin: 0 auto 37px;
+  }
+
+  p {
+    @include poppin(bold700);
+    font-size: 24.89px;
+    color: $lgtblack;
+    text-align: center;
+    letter-spacing: 0.5px;
+    line-height: 1.24;
+
+    @include mq(max, 768) {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    @include mq(max, 425) {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
+
+
+//content-all
+.content-all {
+  margin-bottom: 110px;
+
+  h3 {
+    @include poppin(bold700);
+    font-size: 24.89px;
+    color: $black;
+    letter-spacing: 0.2px;
+    margin-bottom: 10px;
+  }
+
+  h6 {
+    @include poppin(regular400);
+    font-size: 12px;
+    color: $lgtblack;
+    letter-spacing: 0.2px;
+    margin-bottom: 45px;
+  }
+
+  h4 {
+    @include poppin(bold700);
+    font-size: 16px;
+    color: $black;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    @include poppin(regular400);
+    font-size: 14px;
+    color: $black;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    padding-left: 19px;
+    margin-bottom: 35px;
+
+    li {
+      @include poppin(regular400);
+      font-size: 14px;
+      color: $black;
+      list-style: disc;
+      margin-bottom: -4px;
+    }
+  }
+}

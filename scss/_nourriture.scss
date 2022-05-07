@@ -1,0 +1,183 @@
+//nourriture-slider
+.nourriture-slider {
+  //breadcrumb-sec
+  .breadcrumb-sec {
+    top: 40px;
+  }
+
+
+  //main_slider
+  #main_slider {
+    //owl-dots
+    .owl-dots {
+      .owl-dot {
+        &.active {
+          background: $red;
+        }
+      }
+    }
+  }
+}
+
+//promotion-jour
+.promotion-jour {
+  background: $lgtwhite;
+  padding-bottom: 115px;
+  padding-top: 10px;
+
+  //description-dtl
+  .description-dtl {
+    margin-bottom: 30px;
+  }
+
+}
+
+//bg-yellow
+.bg-yellow {
+  background: $yellow;
+
+  .item {
+    padding: 80px 0 100px;
+
+    @include mq(max, 768){
+      padding: 30px 0 40px;
+    }
+  }
+
+  //slide-caption
+  .slide-caption {
+    h4, h3 {
+      color: $black;
+    }
+  }
+}
+
+//coups_de_cour
+#coups_de_cour {
+  .owl-dots {
+    .owl-dot {
+      &.active {
+        background: $red;
+      }
+    }
+  }
+
+
+  //img-box
+  .img-box {
+    height: 250px;
+  }
+
+
+  //smll-slide
+  .small-slide {
+    //img-box
+    .img-box {
+      height: 120px;
+      margin-bottom: 15px;
+    }
+
+    .content-dtl {
+      h2 {
+        span {
+          position: static;
+          display: block;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+
+  //owl-nav
+  .owl-nav {
+    .owl-prev, .owl-next {
+      &.disabled {
+        display: block;
+      }
+    }
+  }
+
+
+  .row {
+    .col-md-8, .col-md-4 {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+
+  //content-dtl
+  .content-dtl {
+    h2 {
+      letter-spacing: 0;
+      margin-bottom: 3px;
+    }
+
+    p {
+      margin-bottom: 8px;
+    }
+
+    .btn-custom {
+      a {
+        padding: 3px 12px;
+      }
+    }
+  }
+
+  //owl-item
+  .owl-item {
+    &.active {
+      .big-slide {
+        .description-dtl {
+          padding-left: 15px;
+
+          @include mq(max, 768) {
+            padding-left: 0;
+          }
+        }
+      }
+
+      .small-slide {
+        .description-dtl {
+          padding-right: 15px;
+
+          @include mq(max, 768) {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//promotion_jour
+#promotion_jour,
+#nos_categories {
+  .owl-nav {
+    .owl-prev {
+      position: absolute;
+      left: -38.5%;
+    }
+  }
+}
+
+//nos_categories
+#coups_de_cour,
+#promotion_jour {
+  .owl-nav {
+    top: 31.5%;
+  }
+}
+
+//nos_categories
+#nos_categories {
+  .owl-nav {
+    top: 35.5%;
+  }
+}
+
+//nos-categories
+.nos-categories {
+  padding: 15px 0 53px;
+}

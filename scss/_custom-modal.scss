@@ -1,0 +1,131 @@
+//custom-modal
+.custom-modal,
+.connexion-modal {
+
+  .modal-dialog {
+    width: 721px;
+    min-height: 323px;
+    @include img-center(both);
+    transform: translate(-50%, -50%) !important;
+    text-align: center;
+    margin: 0;
+
+    @include mq(max, 787) {
+      width: 96%;
+      height: auto;
+    }
+
+    .modal-content {
+    }
+
+    //custom-popup
+    .custom-popup {
+      padding: 70px 15px;
+
+      .close-btn {
+        position: absolute;
+        top: -50px;
+        right: 0;
+        opacity: 0.8;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      h3 {
+        @include poppin(bold700);
+        font-size: 24.89px;
+        color: $lgtblack;
+        margin-bottom: 21px;
+        letter-spacing: 0.5px;
+        line-height: 0.8;
+
+        @include mq(max, 787) {
+          line-height: 1.4;
+        }
+      }
+
+      p {
+        @include poppin(regular400);
+        font-size: 14px;
+        color: $lgtblack;
+        margin-bottom: 30px;
+        padding: 0 175px;
+        letter-spacing: 0.3px;
+
+        @include mq(max, 787) {
+          padding: 0 15px;
+        }
+      }
+    }
+  }
+
+}
+
+//connexion-modal
+.connexion-modal {
+  .modal-dialog {
+    width: 409px;
+    text-align: left;
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    // connectez-vous {
+    .connectez-vous {
+      background: none;
+
+      p {
+        padding: 0;
+
+        @include mq(max, 787) {
+          padding: 0;
+        }
+      }
+
+      form {
+        label {
+          color: $black;
+        }
+
+        input {
+          background: #e4e0f8;
+          border-color: #9f93d9;
+          color: $lgtblack;
+
+          &:hover, &:focus {
+            border: 1px solid #9f93d9;
+          }
+        }
+
+        .mot-de-pass {
+          color: $lgtblack;
+
+          &:hover {
+            color: $red;
+          }
+        }
+
+        .cliquez-ici {
+          color: $lgtblack;
+
+          a {
+            color: $lgtblack;
+
+            &:hover {
+              color: $red;
+            }
+          }
+        }
+      }
+
+      //close-btn
+      .close-btn {
+        position: absolute;
+        top: -50px;
+        right: 0;
+        opacity: 0.8;
+      }
+    }
+  }
+}

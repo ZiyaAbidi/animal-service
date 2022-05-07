@@ -1,0 +1,473 @@
+//pensions-section
+.pensions-section {
+  height: 195px;
+  background: $yellow;
+  position: relative;
+  z-index: 99;
+
+  @include mq(max, 768) {
+    height: auto;
+  }
+
+  //breadcrumb-sec
+  .breadcrumb-sec {
+    bottom: -30px;
+  }
+}
+
+//pension-trouves
+.pension-trouves {
+  background: $white;
+  margin-top: 30px;
+}
+
+//filtrer-par
+.filtrer-par {
+  margin-top: 53px;
+
+  @include mq(max, 991) {
+    margin-top: 25px;
+  }
+
+  @include mq(max, 768) {
+    margin-top: 0;
+  }
+
+  h3 {
+    @include poppin(sembold600);
+    font-size: 16px;
+    color: $lgtblack;
+    letter-spacing: 0.4px;
+    margin-bottom: 10px;
+  }
+
+  .line {
+    width: 230px;
+    height: 1px;
+    background: $line;
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    @include poppin(sembold600);
+    font-size: 12px;
+    color: $red;
+    margin-bottom: 10px;
+  }
+
+}
+
+//checkbox_ul
+.checkbox_ul {
+  margin-bottom: 17px;
+
+  li {
+    .styled-checkbox {
+      & + label {
+        &:before {
+          border: 1px solid $black;
+          @include border-radius(4);
+        }
+      }
+
+      &:checked {
+        & + label {
+          &:after {
+            left: 5px;
+          }
+        }
+      }
+    }
+
+
+    label {
+      @include poppin(regular400);
+      font-size: 12px;
+      color: $black;
+      letter-spacing: .25px;
+      margin-bottom: 6px;
+
+      span {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+
+//pensions-head
+.pensions-head {
+  margin-bottom: 30px;
+
+  h2 {
+    @include poppin(sembold600);
+    font-size: 24.89px;
+    color: $lgtblack;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    margin-bottom: 24px;
+  }
+
+  ul {
+    @include mq(max, 768) {
+      margin-bottom: 25px;
+    }
+
+    li {
+      position: relative;
+      display: inline-block;
+      margin-right: 28px;
+
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 12px;
+        width: 2px;
+        background: $lgtblack;
+        top: 5px;
+        right: -17px;
+      }
+
+      a {
+        @include poppin(sembold600);
+        font-size: 12px;
+        color: $lgtblack;
+        letter-spacing: 0.3px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+
+        &:after {
+          content: none;
+        }
+
+        a {
+          border-right: none;
+        }
+      }
+
+      &.active {
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 4px;
+          background: $red;
+          @include border-radius(22);
+          left: 0;
+          bottom: -8px;
+        }
+      }
+    }
+  }
+
+  table {
+    th, td {
+      @include poppin(regular400);
+      font-size: 16px;
+      width: 189px;
+      padding-bottom: 18px;
+    }
+
+    thead {
+      th {
+        color: $lgtblack;
+        text-transform: uppercase;
+      }
+    }
+
+    tbody {
+      td {
+        color: $blue;
+        letter-spacing: .2px;
+      }
+    }
+  }
+
+}
+
+//btn-afficher
+.btn-afficher {
+  float: right;
+  @include poppin(sembold600);
+  font-size: 12px;
+  color: $white;
+  border: 1px solid $red;
+  background: $red;
+  @include border-radius(22);
+  padding: 5px 22px;
+
+  &:hover {
+    background: $white;
+    color: $red;
+  }
+
+  @include mq(max, 768) {
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+//media-sec
+.media-sec {
+  background: $white;
+  margin-bottom: 58px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  @include border-radius(8);
+  @include box-shadow(0 1px 6px rgba(0, 0, 0, 0.2));
+
+  @include mq(max, 768) {
+    padding: 10px 15px 25px;
+  }
+
+  .media {
+    margin-bottom: 10px;
+
+    .media-left {
+      padding-right: 25px;
+
+      @include mq(max, 991) {
+        display: block;
+        padding-right: 0;
+        margin-bottom: 25px;
+      }
+    }
+
+    .media-body {
+
+    }
+  }
+
+  //img-overlay
+  .img-overlay {
+    @include border-radius(8);
+    height: 275px;
+    background: $adv;
+    overflow: hidden;
+    width: 369px;
+
+    @include mq(max, 992) {
+      width: auto;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+//pensions-info
+.pensions-info {
+  h3 {
+    @include poppin(sembold600);
+    color: $lgtblack;
+    font-size: 24.89px;
+    letter-spacing: 0.7px;
+    margin-bottom: 4px;
+  }
+
+  h5 {
+    @include poppin(regular400);
+    color: $p-graph;
+    font-size: 12px;
+    letter-spacing: 0.1px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+
+  //links
+  .links {
+    margin-bottom: 15px;
+
+    a {
+      @include poppin(sembold600);
+      color: $blue;
+      font-size: 12px;
+      display: block;
+      letter-spacing: 0.2px;
+
+      &:hover {
+        color: $red;
+      }
+
+      //icon-are
+      .icon-are {
+        width: 16px;
+        display: inline-block;
+        text-align: center;
+        margin-right: 3px;
+
+        i.fa {
+          font-size: 18px;
+          position: relative;
+          top: 4px;
+
+          &.fa-heart {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  p {
+    @include poppin(regular400);
+    color: $lgtblack;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    margin-bottom: 45px;
+
+    @include mq(max, 991) {
+      margin-bottom: 25px;
+    }
+  }
+
+  //services-disponibles
+  .services-disponibles {
+    p {
+      @include poppin(sembold600);
+      color: $red;
+      margin-bottom: 5px;
+    }
+
+    ul {
+      li {
+        display: inline-block;
+        margin-bottom: 6px;
+        margin-right: 2px;
+
+        a {
+          @include poppin(sembold600);
+          color: $red;
+          font-size: 12px;
+          border: 1px solid $red;
+          padding: 0 9px;
+          @include border-radius(30);
+          display: block;
+          width: 96px;
+
+          &:hover {
+            background: $red;
+            color: $white;
+          }
+
+          i.fa {
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//media-foot
+.media-foot {
+  text-align: right;
+
+  p {
+    @include poppin(sembold600);
+    color: $p-graph;
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-end;
+    letter-spacing: .2px;
+    margin-bottom: 1px;
+
+    span {
+      @include poppin(bold700);
+      color: $lgtblack;
+      font-size: 34px;
+      position: relative;
+      top: -8px;
+      padding-left: 18px;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include mq(max, 992) {
+      display: block;
+    }
+
+    li {
+      display: inline-block;
+      padding-right: 12px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      p {
+        margin-bottom: 0;
+
+        @include mq(max, 992) {
+          margin-bottom: 15px;
+        }
+      }
+
+      a {
+        padding: 5px 25px;
+      }
+    }
+  }
+}
+
+
+//pagination-div
+.pagination-div {
+  @include full-width;
+  text-align: center;
+
+  .pagination {
+    font-size: 0;
+    margin-bottom: 36px;
+
+    li {
+      display: inline-block;
+      margin: 0 12px;
+
+      @include mq(max, 768) {
+        margin: 0 6px;
+      }
+
+      a {
+        @include poppin(regular400);
+        color: $lgtblack;
+        font-size: 16px;
+        border: none;
+        width: 28px;
+        height: 28px;
+        @include border-radius(100);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        padding-top: 1px;
+
+        &:hover {
+          background: $red;
+          color: $white;
+        }
+      }
+
+      &.active {
+        a {
+          background: $red;
+          color: $white;
+        }
+      }
+
+      &.disabled {
+        a {
+          background: none;
+          color: $lgtblack;
+        }
+      }
+    }
+  }
+}

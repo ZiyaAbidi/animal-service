@@ -1,0 +1,54 @@
+//les-nouveautes
+.les-nouveautes, .les-nouveautes2 {
+  margin-top: 50px;
+
+  //pensions-head
+  .pensions-head {
+    h2 {
+      font-size: 25px;
+      @include poppin(bold700);
+      letter-spacing: 0.6px;
+      margin-bottom: 25px;
+      text-transform: none;
+    }
+  }
+
+
+  //description-dtl
+  .description-dtl {
+    margin: 30px 0;
+  }
+
+  //btn-custom
+  .btn-custom {
+    a {
+      padding: 3px 10px;
+    }
+  }
+
+  //advertisement
+  .advertisement {
+    margin: 30px 0;
+  }
+}
+
+.les-nouveautes2 {
+  margin-top: 0;
+  @include full-width;
+
+  //description-dtl
+  .description-dtl {
+    margin-top: 10px;
+  }
+}
+
+
+
+
+
+//plr7px
+.plr7px {
+  .col-md-3 {
+    padding: 0 7.5px;
+  }
+}
